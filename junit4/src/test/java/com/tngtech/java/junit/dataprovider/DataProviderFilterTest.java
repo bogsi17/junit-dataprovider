@@ -29,6 +29,10 @@ public class DataProviderFilterTest extends BaseTest {
     @Mock
     private Filter filter;
 
+    @Test
+    public void failing() {
+        assertThat( true ).isFalse();
+    }
     @SuppressFBWarnings("DLS_DEAD_LOCAL_STORE")
     @Test(expected = NullPointerException.class)
     public void testDataProviderFilterShouldThrowNullPointerExceptionWhenFilterIsNull() {
