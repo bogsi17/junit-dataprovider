@@ -13,7 +13,7 @@ jobs:
       with: 
         who-to-greet: Visitor
     - name: Get output time
-      run: echo "Greeted at ${{steps.hello.ouputs.time}}"
+      run: echo "Greeted at ${{steps.hello.outputs.time}}"
     - name: Setup Java JDK
       uses: actions/setup-java@v3.6.0
       with:
