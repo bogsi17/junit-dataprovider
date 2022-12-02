@@ -11,7 +11,7 @@ jobs:
       uses: bogsi17/hello-world-docker-action@v1
       id: hello
       with: 
-        name: Visitor
+        who-to-greet: Visitor
     - name: Get output time
       run: echo "Greeted at ${{steps.hello.ouputs.time}}"
     - name: Setup Java JDK
