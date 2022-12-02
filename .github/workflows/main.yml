@@ -7,6 +7,13 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v3
+    - name: Hello world action step
+      uses: bogsi17/hello-world-docker-action@v1
+      id: hello
+      with: 
+        name: Visitor
+    - name: Get output time
+      run: echo "Greeted at ${{steps.hello.ouputs.time}}"
     - name: Setup Java JDK
       uses: actions/setup-java@v3.6.0
       with:
